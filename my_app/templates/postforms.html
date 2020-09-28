@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ object.title }}</h2>
+ <form action="{% url 'answers' %}" method="POST">
+     {% csrf_token %}
+    <input type="text" placeholder="Search...">
+    <button type="submit" class="site-btn">SEARCH</button>
+</form>
+{% endblock  %}

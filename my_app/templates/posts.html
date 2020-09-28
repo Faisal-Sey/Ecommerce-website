@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for item in object_list %}
+    <a href="{% url 'postsforms' %}"><h2>{{ item.title }}</h2></a>
+{% endfor %}
+{% endblock  %}
